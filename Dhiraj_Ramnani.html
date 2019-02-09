@@ -158,15 +158,16 @@ body
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="move()">
 <!-- Only progress bar will be visible on start of the page and will be hidden once the page is completely loaded -->
 <!-- Progress bar -->
-<div id="myProgress">
+
+<div id="myProgress"> <!-- Div myProgress -->
   <div id="myBar"></div>
-</div>
+</div> <!-- Div myProgress end-->
 <!-- All elements will be hidden before the progress bar reaches 100 -->
 <div id="visibility" >
     <!-- navbar -->
 
     <nav class="navbar navbar-default navbar-fixed-top w3-transparent">
-  <div class="container">
+  <div class="container"> 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="hidebackscreen()">
         <span class="icon-bar"></span>
@@ -185,16 +186,15 @@ body
   </div>
 </nav>
 
-<!-- hide everything when navbar toggles -->
-<div id= "hidepagewhennavtoggles">
+<div id="hidewhennavtoggles">
 
 <!-- Jumbotron -->
-<div class="jumbotron text-center w3-text-teal">
+<div class="jumbotron text-center w3-text-teal"> <!-- Div jumbotron -->
   <h1>Dhiraj Ramnani</h1> 
-</div>
+</div> <!-- Div jumbotron end -->
 
 <!-- About Me -->
-<div class="container-fluid w3-text-teal" id="about_me">
+<div class="container-fluid w3-text-teal" id="about_me"> <!-- Div aboutme -->
   <h1 class="w3-center">About Myself</h1>
   <h4 class="w3-padding-16 format" style="margin:3vw;">
       Extremely motivated to constantly develop my skills and grow professionally.
@@ -208,12 +208,12 @@ body
            Scientists Association</a></em> where i enlightened high school students with programming 
            concepts in Java and C++.
        </h4> 
-</div>
+</div> <!-- Div aboutme end -->
 
 <!-- Quotes -->
-<div class="container-fluid w3-text-teal" id="quotes">
+<div class="container-fluid w3-text-teal" id="quotes"> <!-- Div quotes -->
   <h1  class="format" style="text-align:center">Quotes</h1>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel"> <!-- Div myCarousel -->
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -222,7 +222,7 @@ body
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox"> <!-- Div inner carousel -->
       <div class="item active">
         <h4><i class="fa fa-quote-left w3-text-teal"></i><quote class="format"> Success is not the key to happiness.<br> Happiness is the key to success.
             <br> If you love what you are doing, you will be successful<br> - Albert Schweitzer</quote></h4>
@@ -235,13 +235,15 @@ body
             
       </div>
       <div class="item">
-        <h4><i class="fa fa-quote-left w3-text-teal"></i>
-        <quote class="format"> The wise man is one who knows, what he does not know.     
-<br> - Lao Tzu</quote>
-            </quote></h4>
-      </div>
-    </div>
+	  
+      <!-- <h4><i class="fa fa-quote-left w3-text-teal"></i>
+        <quote class="format"> The wise man is one who knows, what he does not know.    <br> - Lao Tzu</quote> </quote></h4>
+		-->
+		
+		</div>
 
+    </div> <!-- Div inner carousel end -->
+	
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -442,14 +444,11 @@ body
       </div> 
     </div>
   </div> <!--End of Contact -->
-  '
-  </div><!-- End of hidepageswhen nav toggles -->
-  
+  </div> <!-- End of hidewhennavtoggles -->
   </div> <!-- End of visibility progress -->
   
 
 <script>
-var counter=0;
 document.getElementById("visibility").style.visibility = "hidden";
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -506,18 +505,19 @@ function move() {
     }
   }
 }
-
+var counter=0;
 function hidebackscreen()
 {
-counter++;
-if(counter%2!=0)
-{
-	document.getElementById("hidepagewhennavtoggles").style.visibility = "hidden";
-	}
-	else
+	counter++;
+	if(counter%2 == 0)
 	{
-	document.getElementById("hidepagewhennavtoggles").style.visibility = "visible";
+		document.getElementById("hidewhennavtoggles").style.visibility = "hidden";
+		
 	}
+	else{
+		document.getElementById("hidewhennavtoggles").style.visibility = "visible";
+	}
+	
 }
 </script>
 </body>

@@ -507,25 +507,24 @@ var counter = 0;
 function hidebackscreen()
 {
 		counter++;
+		submitPoll();
 	if(counter%2 != 0)
 	{
 	
 		document.getElementById("hidewhennavtoggles").style.display = "none";
 		document.getElementById("myCarousel").style.display = "none";
-		submitPoll();
 	}
 	else{
 	
 	
 		document.getElementById("hidewhennavtoggles").style.display = "visible";
 		document.getElementById("myCarousel").style.display = "visible";
-		submitPoll();
 	}
 	
 }
 function submitPoll(){
       document.getElementById("mybutton").disabled = true;
-      setTimeout(function(){document.getElementById("mybutton").disabled = false;},2000);
+      setTimeout(function(){document.getElementById("mybutton").disabled = false;},5000);
   }
 </script>
 </body>

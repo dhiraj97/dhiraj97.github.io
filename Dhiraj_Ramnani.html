@@ -450,6 +450,7 @@ body
   
 
 <script>
+var counter=0;
 document.getElementById("visibility").style.visibility = "hidden";
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -509,7 +510,15 @@ function move() {
 
 function hidebackscreen()
 {
+counter++;
+if(counter%2==0)
+{
 	document.getElementById("hidepagewhennavtoggles").style.visibility = "hidden";
+	}
+	else
+	{
+	document.getElementById("hidepagewhennavtoggles").style.visibility = "visible";
+	}
 }
 </script>
 </body>

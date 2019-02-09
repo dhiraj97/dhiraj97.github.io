@@ -510,17 +510,22 @@ function hidebackscreen()
 	if(counter%2 != 0)
 	{
 	
-		document.getElementById("hidewhennavtoggles").style.display = "none";
-		document.getElementById("myCarousel").style.display = "none";
+		document.getElementById("hidewhennavtoggles").style.visibility = "hidden";
+		document.getElementById("myCarousel").style.visibility = "hidden";
 	}
 	else{
 	
 	
-		document.getElementById("hidewhennavtoggles").style.display = "visible";
-		document.getElementById("myCarousel").style.display = "visible";
+		document.getElementById("hidewhennavtoggles").style.visibility = "visible";
+		document.getElementById("myCarousel").style.visibility = "visible";
 	}
+	submitPoll();
 }
-
+function submitPoll(){
+      document.getElementById("mybutton").disabled = true;
+      setTimeout(function(){document.getElementById("mybutton").disabled = false;},5000);
+	  
+  }
 </script>
 </body>
 </html>

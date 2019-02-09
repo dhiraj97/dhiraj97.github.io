@@ -228,14 +228,16 @@ body
             <br> If you love what you are doing, you will be successful<br> - Albert Schweitzer</quote></h4>
       </div>
       <div class="item">
-       
-      
+        <h4 ><i class="fa fa-quote-left w3-text-teal"></i><quote class="format"> Being the richest man in the cemetery 
+            doesn't matter to me.<br> Going to bed at night saying we've done something <br>wonderful
+            , that's what matters to me.
+<br> - Steve Jobs</quote></h4>
       </div>
       <div class="item">
-	  
+        <h4 ><i class="fa fa-quote-left w3-text-teal"></i><quote class="format"> The wise man is one who knows, what he does not know.
+<br> - Lao Tzu</quote></h4>
+      </div>
       
-		
-		</div>
 
     </div> <!-- Div inner carousel end -->
 	
@@ -434,7 +436,7 @@ body
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+          <button class="btn btn-default pull-right" type="submit" onclick= "click_me()">Send</button>
         </div>
       </div> 
     </div>
@@ -443,7 +445,7 @@ body
   </div> <!-- End of visibility progress -->
   
 
-<script>
+<script type="text/javascript">
 document.getElementById("visibility").style.visibility = "hidden";
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -500,23 +502,28 @@ function move() {
     }
   }
 }
-var counter=0;
+var counter = 0;
+
 function hidebackscreen()
 {
-	counter++;
+	
 	if(counter%2 == 0)
 	{
+	
 		document.getElementById("hidewhennavtoggles").style.visibility = "hidden";
 		document.getElementById("myCarousel").style.visibility = "hidden";
 		
 	}
 	else{
+	
 		document.getElementById("hidewhennavtoggles").style.visibility = "visible";
 		document.getElementById("myCarousel").style.visibility = "visible";
+	
 		
 	}
 	
 }
+
 </script>
 </body>
 </html>

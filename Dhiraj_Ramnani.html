@@ -506,21 +506,19 @@ var counter = 0;
 
 function hidebackscreen()
 {
-	
+		counter++;
 	if(counter%2 == 0)
 	{
 	
 		document.getElementById("hidewhennavtoggles").style.visibility = "hidden";
 		document.getElementById("myCarousel").style.visibility = "hidden";
-		counter++;
+		
 		
 	}
 	else{
 	
 		document.getElementById("hidewhennavtoggles").style.visibility = "visible";
 		document.getElementById("myCarousel").style.visibility = "visible";
-		counter++;
-	
 		
 	}
 	

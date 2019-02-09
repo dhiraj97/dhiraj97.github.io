@@ -140,10 +140,29 @@ body
       font-size: 150px;
     }
   }
+  #myProgress {
+  width: 100%;
+  background-color:#444;
+}
+
+#myBar {
+  width: 0%;
+  height: 10px;
+  text-align: center;
+  line-height: 30px;
+  background-color:powderblue;
+  color: white;
+}
 </style>
     </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="move()">
+<!-- Only progress bar will be visible on start of the page and will be hidden once the page is completely loaded -->
+<!-- Progress bar -->
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+<!-- All elements will be hidden before the progress bar reaches 100 -->
+<div id="visibility">
     <!-- navbar -->
 
     <nav class="navbar navbar-default navbar-fixed-top w3-transparent">
@@ -423,7 +442,9 @@ body
     </div>
   </div>
 </div>
+</div>
 <script>
+document.getElementById("visibility").style.visibility = "hidden";
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, a[href='#myPage']").on('click', function(event) {
@@ -460,6 +481,25 @@ $(document).ready(function(){
 
 })
 
+function move() {
+  var elem = document.getElementById("myBar"); 
+  var width = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+	  document.getElementById("myProgress").style.display = "none";
+	  document.getElementById("visibility").style.visibility = "visible";
+    } else {
+      width++; 
+	  <!-- Changes the width of the inner progress bar -->
+      elem.style.width = width + '%'; 
+	  /*
+      elem.innerHTML = width * 1 + '%';
+	  */
+    }
+  }
+}
 </script>
 </body>
 </html>

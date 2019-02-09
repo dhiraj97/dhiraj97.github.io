@@ -37,7 +37,7 @@ body
     
 }
 .container-fluid {
-  padding: 10vw 8vw;
+  padding: 6vw 5vw;
   text-align: justify;
 }
 .carousel-control.right, .carousel-control.left {
@@ -152,6 +152,8 @@ body
   line-height: 30px;
   background-color:powderblue;
   color: white;
+  
+  .mySlides {display:none}
 }
 </style>
     </head>
@@ -180,7 +182,9 @@ body
         <li><a href="#about_me">ABOUT</a></li>
         <li><a href="#quotes">QUOTES</a></li>
         <li><a href="#resume">RESUME</a></li>
+		<li><a href="#images">Images</a></li>
         <li><a href="#contact">CONTACT</a></li>
+		 <!-- -->
       </ul>
     </div>
   </div>
@@ -417,11 +421,31 @@ body
   </div>
   
   <!-- End Page Container -->
-</div>
+</div><!-- End of RESUME -->
 
+<!-- images -->
+<div id="images" class=" container-fluid" style="max-width:100%;">
+
+<h1  class="format w3-text-teal" style="text-align:center;margin-bottom:5vw;">Images</h1>
+<div class="w3-content" style="max-width:50vw;">
+<img class="mySlides" src="1.jpg" style="width:100%">
+  <img class="mySlides" src="2.jpg" style="width:100%">
+  <img class="mySlides" src="3.jpg" style="width:100%">  
+</div>
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-teal" onclick="plusDivs(-1)">< Prev</button>
+    <button class="w3-button w3-teal" onclick="plusDivs(1)">Next ></button>
+  </div>
+  <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+</div>
+</div>
+<!-- End of images -->
 <!-- Contact -->
 
-<div class=" w3-text-teal w3-container" id="contact">
+<div class=" container-fluid w3-text-teal" id="contact">
 
   <h1 class="text-center ">CONTACT</h1>
     <div class="center" style="margin-top:5vw">
@@ -520,6 +544,34 @@ function hidebackscreen()
 		document.getElementById("myCarousel").style.visibility = "visible";
 	}
 }
+
+<!-- Images Carousel -->
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-teal", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-teal";
+  }
 </script>
 </body>
 </html>

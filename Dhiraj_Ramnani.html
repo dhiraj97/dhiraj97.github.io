@@ -507,7 +507,6 @@ var counter = 0;
 function hidebackscreen()
 {
 		counter++;
-		submitPoll();
 	if(counter%2 != 0)
 	{
 	
@@ -520,7 +519,7 @@ function hidebackscreen()
 		document.getElementById("hidewhennavtoggles").style.display = "visible";
 		document.getElementById("myCarousel").style.display = "visible";
 	}
-	
+	submitPoll();
 }
 function submitPoll(){
       document.getElementById("mybutton").disabled = true;

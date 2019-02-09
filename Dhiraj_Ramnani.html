@@ -226,7 +226,6 @@ body
       <div class="item active">
         <h4><i class="fa fa-quote-left w3-text-teal"></i><quote class="format"> Success is not the key to happiness.<br> Happiness is the key to success.
             <br> If you love what you are doing, you will be successful<br> - Albert Schweitzer</quote></h4>
-            
       </div>
       <div class="item">
         <h4 ><i class="fa fa-quote-left w3-text-teal"></i><quote class="format"> Being the richest man in the cemetery 
@@ -511,7 +510,7 @@ function move() {
 function hidebackscreen()
 {
 counter++;
-if(counter%2==0)
+if(counter%2!=0)
 {
 	document.getElementById("hidepagewhennavtoggles").style.visibility = "hidden";
 	}

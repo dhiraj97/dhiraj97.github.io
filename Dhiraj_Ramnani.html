@@ -25,7 +25,7 @@ body
 {
   /*background-image:url("white.jpg");*/
   /*background-image:url("black.jpg");*/
-  background-color:black;
+  background-color:white;
   background-attachment: fixed;
   font-family:sans-serif;
 }
@@ -88,7 +88,8 @@ body
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: red !important;
+  <1-- color: red !important; -->
+  color:white;
   background-color: teal !important;
 }
 
@@ -168,7 +169,7 @@ body
 <div id="visibility" >
     <!-- navbar -->
 
-    <nav class="navbar navbar-default navbar-fixed-top w3-transparent">
+    <nav class="navbar navbar-default navbar-fixed-top w3-teal">
   <div class="container"> 
     <div class="navbar-header">
       <button id="mybutton" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="hidebackscreen()">
@@ -182,14 +183,15 @@ body
         <li><a href="#about_me">ABOUT</a></li>
         <li><a href="#quotes">QUOTES</a></li>
         <li><a href="#resume">RESUME</a></li>
-		<li><a href="#images">Images</a></li>
+		<li><a href="#images">IMAGES</a></li>
         <li><a href="#contact">CONTACT</a></li>
-		 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Colors <span class="caret"></span></a>
-        <ul class="dropdown-menu w3-transparent">
+		 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">COLORS <span class="caret"></span></a>
+        <ul class="dropdown-menu w3-teal">
           <li><a onclick="document.getElementById('myPage').style.backgroundColor='black'">Black</a></li>
           <li><a onclick="document.getElementById('myPage').style.backgroundColor='orange'">Orange</a></li>
           <li><a onclick="document.getElementById('myPage').style.backgroundColor='darkgrey'">Grey</a></li>
         </ul>
+		</li>
 		 <!-- -->
       </ul>
     </div>
@@ -266,7 +268,7 @@ body
 <!--
     resume
  Page Container -->
-<div class=" container-fluid" style="max-width:1400px;" id="resume">
+<div class="container-fluid" style="max-width:1400px;" id="resume">
 
 <h1  class="format w3-text-teal" style="text-align:center;margin-bottom:5vw;">Resume</h1>
   <!-- The Grid -->
@@ -275,7 +277,7 @@ body
     <!-- Left Column -->
     <div class="w3-third">
     
-      <div class="w3-transparent w3-text-teal w3-card-4">
+      <div class=" w3-white w3-text-teal w3-card-4">
         <div class="w3-display-container">
           <img src="dhiraj.jpg" style="width:100%" alt="Dhiraj_profile">
           <div class="w3-display-bottomleft w3-container w3-text-teal">
@@ -409,8 +411,8 @@ body
            <!-- End of links -->
 
            <!-- Certificates -->
-           <div class="w3-container w3-card w3-transparent">
-        <h2 class="w3-text-teal w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Certificates</h2>
+           <div class="w3-container w3-card w3-transparent w3-padding-16">
+        <h2 class="w3-text-teal w3-padding-16 "><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Certificates</h2>
         <div class="w3-container w3-text-teal" style="padding-bottom:20px;">
          <ul style="list-style:none">
          <li><i class="fa fa-arrow-right fa-fw w3-margin-right w3-text-teal"></i><a href="https://www.youracclaim.com/badges/10bfe28e-fbb4-499d-8c82-c6856859a722/linked_in_profile">Data Science Foundations - Level 1 IBM</a></li>

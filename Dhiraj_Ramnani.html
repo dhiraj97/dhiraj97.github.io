@@ -184,6 +184,12 @@ body
         <li><a href="#resume">RESUME</a></li>
 		<li><a href="#images">Images</a></li>
         <li><a href="#contact">CONTACT</a></li>
+		 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Colors <span class="caret"></span></a>
+        <ul class="dropdown-menu w3-transparent">
+          <li><a onclick="document.getElementById('myPage').style.backgroundColor='black'">Black</a></li>
+          <li><a onclick="document.getElementById('myPage').style.backgroundColor='orange'">Orange</a></li>
+          <li><a onclick="document.getElementById('myPage').style.backgroundColor='darkgrey'">Grey</a></li>
+        </ul>
 		 <!-- -->
       </ul>
     </div>
@@ -471,20 +477,20 @@ body
 
 <script type="text/javascript">
 
+/*
 <!-- changing backgroung image every 3 seconds -->
-var image = ["1.jpg","2.jpg",];
+var image = ["black","lightgrey","gold"];
 var cons = 0;
 setInterval(function hello()
 {
-   document.getElementById("myPage").style.backgroundImage= "url(" + image[cons] + ")";
-   document.getElementById("myPage").class = "img-responsive";
+   document.getElementById("myPage").style.backgroundColor=""+image[cons];
    cons++;
    if (cons == image.length) {
         cons =  0;
       }
 },3000);
 <!-- image change end -->
-
+*/
 document.getElementById("visibility").style.visibility = "hidden";
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link

@@ -428,7 +428,7 @@ body
 
 <h1  class="format w3-text-teal" style="text-align:center;margin-bottom:5vw;">Images</h1>
 <div class="w3-content" style="max-width:50vw;">
-<img class="mySlides" src="1.jpg" style="width:100%">
+<img class="mySlides" src="group.jpg" style="width:100%">
   <img class="mySlides" src="2.jpg" style="width:100%">
   <img class="mySlides" src="3.jpg" style="width:100%">  
 </div>
@@ -470,6 +470,20 @@ body
   
 
 <script type="text/javascript">
+
+<!-- changing backgroung image every 3 seconds -->
+var image = ["1.jpg","2.jpg",];
+var cons = 0;
+setInterval(function hello()
+{
+   document.getElementById("myPage").style.backgroundImage= "url(" + image[cons] + ")";
+   cons++;
+   if (cons == image.length) {
+        cons =  0;
+      }
+},3000);
+<!-- image change end -->
+
 document.getElementById("visibility").style.visibility = "hidden";
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -526,6 +540,7 @@ function move() {
     }
   }
 }
+<!-- For hiding components in mobile when nav toggles -->
 var counter = 0;
 
 function hidebackscreen()

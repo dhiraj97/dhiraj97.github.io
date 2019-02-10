@@ -477,6 +477,7 @@ var cons = 0;
 setInterval(function hello()
 {
    document.getElementById("myPage").style.backgroundImage= "url(" + image[cons] + ")";
+   document.getElementById("myPage").class = "img-responsive";
    cons++;
    if (cons == image.length) {
         cons =  0;

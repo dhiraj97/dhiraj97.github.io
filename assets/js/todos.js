@@ -40,6 +40,7 @@ $("ul").on("click","span",function(event){
 $("input[type='text']").on("keypress",function(event){
 	if(event.which == 13)
 	{
+		
 		$("li").removeClass("mobile");
 		var todoText = $(this).val();
 		$(this).val("");

@@ -4,7 +4,7 @@
 
 	 $(this).css(
 	 {
-		 fontSize:"250%",
+	
 		 color:"#000"
 	 }
 	 );
@@ -15,7 +15,6 @@
 
 	 $(this).css(
 	 {
-		 fontSize:"200%",
 		 color:"#333"
 		 
 	 }

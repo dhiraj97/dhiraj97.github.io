@@ -40,10 +40,17 @@ $("ul").on("click","span",function(event){
 $("input[type='text']").on("keypress",function(event){
 	if(event.which == 13)
 	{
-		
+		$("li").removeClass("mobile");
 		var todoText = $(this).val();
 		$(this).val("");
 		$("ul").append("<li><span><i class='fa fa-thumbs-down'></i></span>"+todoText+"</li>");
 	}
 	
+});
+
+$("input[type='text']").on("focus",function(){
+	$("li").addClass("mobile");
+});
+$("input[type='text']").on("focusout",function(){
+	$("li").removeClass("mobile");
 });

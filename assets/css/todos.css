@@ -10,7 +10,7 @@ body
 	width:100%;
 	margin: 6% auto;
 	background:#f7f7f7;
-	height:80%;
+	height:auto;
 }
 h1
 {
@@ -64,7 +64,7 @@ li{
 	padding:1%;
 	background:#fff;
 	color:#333;
-	font-size:200%;
+	font-size:150%;
 	height:8%;
 }
 
@@ -93,6 +93,10 @@ li:nth-child(2n)
 .fa-thumbs-down
 {
 	padding: 0 0.5vw 0 0;
+}
+.mobile
+{
+	font-size: 80%;
 }
 }
 

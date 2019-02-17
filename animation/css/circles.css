@@ -10,3 +10,12 @@ html,body
 	height:100%;
 	background:black;
 }
+h1
+{
+	background:black;
+	color:teal;
+	padding:0;
+	margin:0 auto;
+	font-size:400%;
+	
+}

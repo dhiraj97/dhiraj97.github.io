@@ -3,7 +3,14 @@
 <title>Animation & Sound Game</title>
 <script  type="text/javascript" src="js/lib/paper-full.js"></script>
 <script  type="text/javascript" src="js/lib/howler.js"></script>
+<script type="text/javascript" src="js/lib/jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="css/circles.css"></link>
+<script>
+$(document).keypress(function(e)
+{
+	document.getElementById("display").style.display = "none";
+});
+</script>
 <script type="text/paperscript" canvas="mycanvas">
 
 var sounds = new Howl({
@@ -137,6 +144,7 @@ var circles =[];
 </script>
 </head>
 <body>
+<h1 id="display">Press any key from a-z </h1>
 <canvas id="mycanvas" resize></canvas>
 </body>
 </html>

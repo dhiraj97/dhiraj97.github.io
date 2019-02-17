@@ -10,7 +10,12 @@ var resetButton = document.getElementById("reset");
 var easyBtn = document.getElementById("easy");
 var hardBtn = document.getElementById("hard");
 var extremeBtn = document.getElementById("extreme");
-
+var correctsound = new Howl({
+	src: ['animation/sounds/bubbles.mp3']
+});
+var wrongsound = new Howl({
+	src: ['animation/sounds/beep.mp3']
+});
 easyBtn.addEventListener("click",function(){
 	h1.style.backgroundColor = "steelblue";
 	message.innerHTML="";
@@ -134,6 +139,7 @@ for(var i=0;i<square.length;i++)
 
 		if(clickedColor === randomColor)
 		{
+			correctsound.play();
 			setBackgroundToCorrectColor(clickedColor);
 			message.textContent = "Correct";
 			h1.style.backgroundColor = clickedColor;
@@ -141,6 +147,7 @@ for(var i=0;i<square.length;i++)
 			
 		}
 		else{
+			wrongsound.play();
 			this.style.backgroundColor = "black";
 			message.textContent = "Try Again";
 		}

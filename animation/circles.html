@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Animation & Sound Game</title>
+<script  type="text/javascript" src="js/lib/paper-full.js"></script>
+<script  type="text/javascript" src="js/lib/howler.js"></script>
+<link rel="stylesheet" href="css/circles.css"></link>
+<script type="text/paperscript" canvas="mycanvas">
+
+var sounds = new Howl({
+	src: ['sounds/bubbles.mp3']
+});
+
+var keyData = {
+	a: {
+		sound: new Howl({src:['sounds/bubbles.mp3']})
+	},
+	b: {
+		sound: new Howl({src:['sounds/clay.mp3']})
+	},
+	c: {
+		sound: new Howl({src:['sounds/confetti.mp3']})
+	},
+	d:	{
+		sound: new Howl({src:['sounds/dotted-spiral.mp3']})
+	},
+	e: {
+		sound: new Howl({src:['sounds/flash-1.mp3']})
+	},
+	f: {
+		sound: new Howl({src:['sounds/flash-2.mp3']})
+	},
+	g: {
+		sound: new Howl({src:['sounds/flash-3.mp3']})
+	},
+	h: {
+		sound: new Howl({src:['sounds/glimmer.mp3']})
+	},
+	i: {
+		sound: new Howl({src:['sounds/moon.mp3']})
+	},
+	j: {
+		sound: new Howl({src:['sounds/pinwheel.mp3']})
+	},
+	k: {
+		sound: new Howl({src:['sounds/piston-1.mp3']})
+	},
+	l: {
+		sound: new Howl({src:['sounds/piston-2.mp3']})
+	},
+	m: {
+		sound: new Howl({src:['sounds/piston-3.mp3']})
+	},
+	n: {
+		sound: new Howl({src:['sounds/prism-1.mp3']})
+	},
+	o: {
+		sound: new Howl({src:['sounds/prism-2.mp3']})
+	},
+	p: {
+		sound: new Howl({src:['sounds/prism-3.mp3']})
+	},
+	q: {
+		sound: new Howl({src:['sounds/splits.mp3']})
+	},
+	r: {
+		sound: new Howl({src:['sounds/squiggle.mp3']})
+	},
+	s: {
+		sound: new Howl({src:['sounds/strike.mp3']})
+	},
+	t: {
+		sound: new Howl({src:['sounds/suspension.mp3']})
+	},
+	u: {
+		sound: new Howl({src:['sounds/timer.mp3']})
+	},
+	v: {
+		sound: new Howl({src:['sounds/ufo.mp3']})
+	},
+	w: {
+		sound: new Howl({src:['sounds/veil.mp3']})
+	},
+	x: {
+		sound: new Howl({src:['sounds/wipe.mp3']})
+	},
+	y: {
+		sound: new Howl({src:['sounds/zig-zag.mp3']})
+	},
+	z: {
+		sound: new Howl({src:['sounds/corona.mp3']})
+	}
+	
+};
+var circles =[];
+	function onKeyDown(event)
+	{
+		if(keyData[event.key])
+		{
+	
+			// returns max width and height of the frame
+			var maxpoint = new Point(view.size.width,view.size.height);
+			//Point.random gives random Point between 0 and 1
+			var randomPoint = Point.random();
+			//0.1 - 0.99(randomPoint) multiply with maxpoint
+			var point = maxpoint * randomPoint;
+			//creates a new Path for a circle with random point and radius of 300
+			var newCircle = new Path.Circle(point,300);
+			//fills random Color to the circles
+			newCircle.fillColor = randomColor();
+			keyData[event.key].sound.play();
+			circles.push(newCircle);
+		}
+	
+	}
+		
+		function randomColor()
+		{
+			var r = Math.floor(Math.random()* 255);
+			var g = Math.floor(Math.random()* 255);
+			var b = Math.floor(Math.random()* 255);
+			
+			return "rgb("+r+", "+g+", "+b+")";
+		}
+		function onFrame()
+		{
+			for(var i=0;i<circles.length;i++)
+			{
+			circles[i].fillColor.hue+=2;
+			circles[i].scale(.91);
+			 if(circles[i].area < 1){
+			  circles[i].remove(); // remove the circle from the canvas
+			  circles.splice(i, 1); // remove the circle from the array
+			  console.log(circles.length);
+			}
+			}
+		}
+</script>
+</head>
+<body>
+<canvas id="mycanvas" resize></canvas>
+</body>
+</html>

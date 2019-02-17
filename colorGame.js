@@ -11,6 +11,7 @@ var easyBtn = document.getElementById("easy");
 var hardBtn = document.getElementById("hard");
 var extremeBtn = document.getElementById("extreme");
 var correctsound = new Howl({
+	
 	src: ['animation/sounds/bubbles.mp3']
 });
 var wrongsound = new Howl({

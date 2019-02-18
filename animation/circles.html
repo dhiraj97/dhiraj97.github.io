@@ -10,6 +10,11 @@ $(document).keypress(function(e)
 {
 	document.getElementById("display").style.display = "none";
 });
+$(document).click(function(e)
+{
+	document.getElementById("display").style.display = "none";
+});
+
 </script>
 <script type="text/paperscript" canvas="mycanvas">
 
@@ -226,8 +231,7 @@ var circles =[];
 		var path;
 		function onMouseDown(event)
 		{
-				console.log(event.point);
-				
+			
 			//0.1 - 0.99(randomPoint) multiply with maxpoint
 			var point = event.point;
 			//creates a new Path for a circle with random point and radius of 300
@@ -242,7 +246,7 @@ var circles =[];
 </script>
 </head>
 <body>
-<h1 id="display">Press any key from a-z </h1>
+<h1 id="display">Press any key from a-z or tap anywhere on screen</h1>
 <canvas id="mycanvas" resize></canvas>
 </body>
 </html>

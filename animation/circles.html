@@ -98,6 +98,88 @@ var keyData = {
 	}
 	
 };
+
+var mouseData = {
+	0: {
+		sound: new Howl({src:['sounds/bubbles.mp3']})
+	},
+	1: {
+		sound: new Howl({src:['sounds/clay.mp3']})
+	},
+	2: {
+		sound: new Howl({src:['sounds/confetti.mp3']})
+	},
+	3:	{
+		sound: new Howl({src:['sounds/dotted-spiral.mp3']})
+	},
+	4: {
+		sound: new Howl({src:['sounds/flash-1.mp3']})
+	},
+	5: {
+		sound: new Howl({src:['sounds/flash-2.mp3']})
+	},
+	6: {
+		sound: new Howl({src:['sounds/flash-3.mp3']})
+	},
+	7: {
+		sound: new Howl({src:['sounds/glimmer.mp3']})
+	},
+	8: {
+		sound: new Howl({src:['sounds/moon.mp3']})
+	},
+	9: {
+		sound: new Howl({src:['sounds/pinwheel.mp3']})
+	},
+	10: {
+		sound: new Howl({src:['sounds/piston-1.mp3']})
+	},
+	11: {
+		sound: new Howl({src:['sounds/piston-2.mp3']})
+	},
+	12: {
+		sound: new Howl({src:['sounds/piston-3.mp3']})
+	},
+	13: {
+		sound: new Howl({src:['sounds/prism-1.mp3']})
+	},
+	14: {
+		sound: new Howl({src:['sounds/prism-2.mp3']})
+	},
+	15: {
+		sound: new Howl({src:['sounds/prism-3.mp3']})
+	},
+	16: {
+		sound: new Howl({src:['sounds/splits.mp3']})
+	},
+	17: {
+		sound: new Howl({src:['sounds/squiggle.mp3']})
+	},
+	18: {
+		sound: new Howl({src:['sounds/strike.mp3']})
+	},
+	19: {
+		sound: new Howl({src:['sounds/suspension.mp3']})
+	},
+	20: {
+		sound: new Howl({src:['sounds/timer.mp3']})
+	},
+	21: {
+		sound: new Howl({src:['sounds/ufo.mp3']})
+	},
+	22: {
+		sound: new Howl({src:['sounds/veil.mp3']})
+	},
+	23: {
+		sound: new Howl({src:['sounds/wipe.mp3']})
+	},
+	24: {
+		sound: new Howl({src:['sounds/zig-zag.mp3']})
+	},
+	25: {
+		sound: new Howl({src:['sounds/corona.mp3']})
+	}
+	
+};
 var circles =[];
 	function onKeyDown(event)
 	{
@@ -132,14 +214,30 @@ var circles =[];
 		{
 			for(var i=0;i<circles.length;i++)
 			{
-			circles[i].fillColor.hue+=2;
-			circles[i].scale(.91);
+				circles[i].fillColor.hue+=2;
+				circles[i].scale(.91);
 			 if(circles[i].area < 1){
 			  circles[i].remove(); // remove the circle from the canvas
 			  circles.splice(i, 1); // remove the circle from the array
 			  console.log(circles.length);
 			}
 			}
+		}
+		var path;
+		function onMouseDown(event)
+		{
+				console.log(event.point);
+				
+			//0.1 - 0.99(randomPoint) multiply with maxpoint
+			var point = event.point;
+			//creates a new Path for a circle with random point and radius of 300
+			var newCircle = new Path.Circle(point,300);
+			//fills random Color to the circles
+			newCircle.fillColor = randomColor();
+			circles.push(newCircle);
+			var randSound = Math.floor(Math.random()* 26);
+			console.log(randSound);
+			mouseData[randSound].sound.play();
 		}
 </script>
 </head>

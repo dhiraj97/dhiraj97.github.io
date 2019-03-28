@@ -89,7 +89,6 @@ body
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  <1-- color: red !important; -->
   color:white;
   background-color: teal !important;
 }
@@ -465,7 +464,7 @@ body
     <div class="center" style="margin-top:5vw">
       <div class="row" >
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" style="border:4px groove powderblue; name="name" placeholder="Name" type="text" required>
+          <input class="form-control" id="name" style="border:4px groove powderblue;" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
           <input class="form-control" id="email" name="email" style="border:4px groove powderblue;" placeholder="Email" type="email" required>
@@ -479,6 +478,13 @@ body
       </div> 
     </div>
   </div> <!--End of Contact -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="acheiverproperties.jpg" alt="" style="width:514px">
+      </div>
+    </div>
+  </div>
   </div> <!-- End of hidewhennavtoggles -->
   </div> <!-- End of visibility progress -->
   
@@ -554,7 +560,6 @@ function move() {
 	  document.getElementById("visibility").style.visibility = "visible";
     } else {
       width++; 
-	  <!-- Changes the width of the inner progress bar -->
       elem.style.width = width + '%'; 
 	  /*
       elem.innerHTML = width * 1 + '%';
@@ -562,7 +567,7 @@ function move() {
     }
   }
 }
-<!-- For hiding components in mobile when nav toggles -->
+
 var counter = 0;
 
 function hidebackscreen()
@@ -582,7 +587,7 @@ function hidebackscreen()
 	}
 }
 
-<!-- Images Carousel -->
+
 var slideIndex = 1;
 showDivs(slideIndex);
 

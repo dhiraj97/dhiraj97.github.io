@@ -19,6 +19,8 @@
   <!-- jquery link should always be above than bootstrap -->
   <script src="jquery-3.3.1.min.js"></script>
   <script src="bootstrap-3.4.0/js/bootstrap.min.js"></script>
+  <script src="assets/js/lib/image-map.js"></script>
+
   <!-- Styling internally css -->
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
@@ -481,12 +483,14 @@ body
   </div> <!--End of Contact -->
   <div class="container" id="email-sig">
     <div class="row">
-      <img src="image001.png" alt="" usemap="#image-map">
-      <map name="image-map">
-          <area target="" alt="email" title="email" href="www.achieverproperties.com" coords="228,161,227,190,243,189,243,161" shape="poly">
-          <area target="" alt="website" title="website" href="www.achieverproperties.com" coords="591,84,589,182,703,182,703,85" shape="poly">
-          <area target="" alt="website" title="website" href="www.achieverproperties.com" coords="431,181,431,170,440,167,447,174,442,181" shape="poly">
-      </map>
+      <div class="col text-center">
+          <img src="signature.png" alt="" usemap="#image-map" class="img-fluid" hidefocus="true">
+          <map name="image-map">
+              <area target="" alt="email" title="email" href="http://achieverproperties.com/" coords="228,161,227,190,243,189,243,161" shape="poly">
+              <area target="" alt="website" title="website" href="http://achieverproperties.com/" coords="591,84,589,182,703,182,703,85" shape="poly">
+              <area target="" alt="website" title="website" href="http://achieverproperties.com/" coords="431,181,431,170,440,167,447,174,442,181" shape="poly">
+          </map>
+      </div>
     </div>
   </div>
   </div> <!-- End of hidewhennavtoggles -->
@@ -499,7 +503,10 @@ body
 particlesJS.load('particles-js','particles/particles.json',function(){
 console.log("Loaded");
 });
+//image map
+$("img[usemap]").imageMap();
 </script>
+
 <script type="text/javascript">
 
 /*

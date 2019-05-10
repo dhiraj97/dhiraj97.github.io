@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1"
+    />
+
+    <title>Movie Review</title>
+
+    <!-- Loading third party fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--[if lt IE 9]>
+      <script src="js/ie-support/html5.js"></script>
+      <script src="js/ie-support/respond.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="site-content">
+      <header class="site-header">
+        <div class="container">
+          <a href="index.html" id="branding">
+            <img src="images/logo.png" alt="" class="logo" />
+            <div class="logo-copy">
+              <h1 class="site-title">Movie Mania</h1>
+              <small class="site-description">Highly Recommended</small>
+            </div>
+          </a>
+          <!-- #branding -->
+
+          <div class="main-navigation">
+            <button type="button" class="menu-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="genres.html">Genres</a>
+              </li>
+              <li class="menu-item current-menu-item"><a href="years.html">Years</a></li>
+            </ul>
+            <!-- .menu -->
+          </div>
+          <!-- .main-navigation -->
+
+          <div class="mobile-navigation"></div>
+        </div>
+      </header>
+      <main class="main-content">
+        <div class="container">
+          <div class="page">
+            <div class="row">
+              <div class="col-md-12">
+                <div id="myBtnContainer">
+                  <button class="btn active" onclick="filterSelection('all')">
+                    Show all
+                  </button>
+                  <button class="btn" onclick="filterSelection('2010')">
+                    2010
+                  </button>
+                  <button class="btn" onclick="filterSelection('2011')">
+                    2011
+                  </button>
+                  <button class="btn" onclick="filterSelection('2012')">
+                    2012
+                  </button>
+                  <button class="btn" onclick="filterSelection('2013')">
+                    2013
+                  </button>
+                  <button class="btn" onclick="filterSelection('2014')">
+                    2014
+                  </button>
+                  <button class="btn" onclick="filterSelection('2015')">
+                    2015
+                  </button>
+                  <button class="btn" onclick="filterSelection('2016')">
+                    2016
+                  </button>
+                  <button class="btn" onclick="filterSelection('2017')">
+                    2017
+                  </button>
+                  <button class="btn" onclick="filterSelection('2018')">
+                    2018
+                  </button>
+                </div>
+                <div class="filterDiv 2010 mt-5">
+                  <img src="dummy/top_2010_1080.png" />
+                </div>
+                <div class="filterDiv 2011">
+                    <img src="dummy/top_2011_1080.png" />
+                  </div>
+                <div class="filterDiv 2012">
+                    <img src="dummy/top_2012_1080.png" />
+                  </div>
+                <div class="filterDiv 2013">
+                    <img src="dummy/top_2013_1080.png" />
+                  </div>
+                <div class="filterDiv 2014">
+                    <img src="dummy/top_2014_1080.png" />
+                  </div>
+                <div class="filterDiv 2015">
+                    <img src="dummy/top_2015_1080.png" />
+                  </div>
+                <div class="filterDiv 2016">
+                    <img src="dummy/top_2016_1080.png" />
+                  </div>
+                <div class="filterDiv 2017">
+                    <img src="dummy/top_2017_1080.png" />
+                  </div>
+                <div class="filterDiv 2018">
+                    <img src="dummy/top2018_1080.png" />
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container -->
+      </main>
+      <footer class="site-footer">
+        <div class="container">
+          <!-- .row -->
+          <div class="colophon">Copyright 2019, Design by Dhiraj Ramnani</div>
+        </div>
+        <!-- .container -->
+      </footer>
+    </div>
+    <!-- Default snippet for navigation -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("filterDiv");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+        
+  </body>
+</html>

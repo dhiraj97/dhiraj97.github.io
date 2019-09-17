@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Dhiraj Ramnani</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Dhiraj Ramnani Website">
+<meta name="keywords" content="Dhiraj,Ramnani,Sunil,About,Resume,Quotes,Contact">
+<meta name="author" content="Dhiraj Ramnani">
+<!--<link rel="stylesheet" href="w3.css">
+<link rel='stylesheet' href="bootstrap-3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+ <script src="bootstrap-3.4.0/js/bootstrap.min.js"></script>
+ <script src="jquery-3.3.1.min.js"></script>-->
+ <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="bootstrap-3.4.0/css/bootstrap.min.css">
+  <!-- jquery link should always be above than bootstrap -->
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="bootstrap-3.4.0/js/bootstrap.min.js"></script>
+  <script src="assets/js/lib/image-map.js"></script>
+
+  <!-- Styling internally css -->
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+body
+{
+  /*background-image:url("white.jpg");*/
+  /*background-image:url("black.jpg");*/
+  background-color:white;
+  background-attachment: fixed;
+  font-family:sans-serif;
+}
+.jumbotron
+{
+    background-color:transparent;
+    padding:8vw 0 1vw 1vw;
+    font-family: sans-serif;
+    
+}
+.container-fluid {
+  padding: 6vw 5vw;
+  text-align: justify;
+}
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: teal;
+}
+
+.carousel-indicators li {
+  border-color: teal;
+}
+
+.carousel-indicators li.active {
+  background-color: teal;
+}
+
+.item h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 400;
+  font-style: italic;
+  margin: 70px 0;
+}
+
+.item span {
+  font-style: normal;
+}
+  .format
+  {
+    
+      line-height: 1.8;
+	word-spacing:1%;
+    
+  }
+
+.navbar {
+  margin-bottom: 0;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family:sans-serif;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color:white;
+  background-color: teal !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: teal !important;
+}
+.slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+
+   @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  #myProgress {
+  width: 100%;
+  background-color:#444;
+}
+
+#myBar {
+  width: 0%;
+  height: 10px;
+  text-align: center;
+  line-height: 30px;
+  background-color:powderblue;
+  color: white;
+}
+#particles-js
+{
+	height:20%;
+	background:linear-gradient(to bottom right,white,blue);
+}
+ .mySlides {display:none}
+
+</style>
+    </head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="move()">
+<!-- Only progress bar will be visible on start of the page and will be hidden once the page is completely loaded -->
+<!-- Progress bar -->
+
+<div id="myProgress"> <!-- Div myProgress -->
+  <div id="myBar"></div>
+</div> <!-- Div myProgress end-->
+<!-- All elements will be hidden before the progress bar reaches 100 -->
+<div id="visibility" >
+    <!-- navbar -->
+
+    <nav class="navbar navbar-default navbar-fixed-top w3-teal">
+  <div class="container"> 
+    <div class="navbar-header">
+      <button id="mybutton" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="hidebackscreen()">
+        <span class="icon-bar w3-black"></span>
+        <span class="icon-bar w3-black"></span>
+        <span class="icon-bar w3-black"></span> 
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about_me">ABOUT</a></li>
+        <li><a href="#quotes">QUOTES</a></li>
+        <li><a href="#resume">RESUME</a></li>
+		<li><a href="#project">PROJECTS</a></li>
+        <li><a href="#contact"></a></li>
+		 <li class="dropdown"><a class="dropdown-toggle w3-teal" data-toggle="dropdown">COLORS <span class="caret"></span></a>
+        <ul class="dropdown-menu w3-teal">
+          <li><a onclick="document.getElementById('myPage').style.backgroundColor='black'">Black</a></li>
+          <li><a onclick="document.getElementById('myPage').style.backgroundColor='orange'">Orange</a></li>
+          <li><a onclick="document.getElementById('myPage').style.backgroundColor='darkgrey'">Grey</a></li>
+        </ul>
+		</li>
+		 <!-- -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="hidewhennavtoggles">
+
+<!-- Jumbotron -->
+<div id="particles-js">
+<div class="jumbotron w3-center text-center w3-text-teal"  > <!-- Div jumbotron -->
+  <h1>Dhiraj Ramnani</h1> 
+</div> <!-- Div jumbotron end -->
+</div>
+<!-- About Me -->
+<div class="container-fluid w3-text-teal" id="about_me"> <!-- Div aboutme -->
+  <h1 class="w3-center">About Myself</h1>
+  <h4 class="w3-padding-16 format" style="margin:3vw;padding:0 10%">
+     I prefer being a self motivated professional and constantly develop my technical skills to achieve growth.
+       I am confident about my abilities to come up with interesting ideas in the field of
+       Information Technology. In my free time, I like brainstorming about possible project ideas
+       and read articles that help me enhance my knowledge. Being a student with strong 
+       and industrious academic prowess from the teachings of <em>Mumbai University</em>
+       along with numerous ambitions for the future, I have imbibed vigorous theoretical 
+       and practical concepts in Computer Science and Information Technology. I am passionate towards teaching which led me to work for an NGO in Vashi named <em><a href="http://www.iwsa.net/">Indian Women
+           Scientists Association</a></em> where i guided high school students with programming 
+           concepts of Java and C++.
+       </h4> 
+</div> <!-- Div aboutme end -->
+
+<div class="container-fluid w3-text-teal" id="quotes"> <!-- Div quotes -->
+<!-- Quotes -->
+  <h1  class="format" style="text-align:center">Quotes</h1>
+  <div id="myCarousel" class="carousel slide text-center data-ride="carousel"> <!-- Div myCarousel -->
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox"> <!-- Div inner carousel -->
+      <div class="item active">
+        <h4><i class="fa fa-quote-left w3-text-teal"></i><quote class="format"> Success is not the key to happiness.<br> Happiness is the key to success.
+            <br> If you love what you are doing, you will be successful<br> - Albert Schweitzer</quote></h4>
+      </div>
+      <div class="item">
+        <h4 ><i class="fa fa-quote-left w3-text-teal"></i><quote class="format"> Being the richest man in the cemetery 
+            doesn't matter to me.<br> Going to bed at night saying we've done something <br>wonderful
+            , that's what matters to me.
+<br> - Steve Jobs</quote></h4>
+      </div>
+      <div class="item">
+        <h4 ><i class="fa fa-quote-left w3-text-teal"></i><quote class="format"> The wise man is one who knows, what he does not know.
+<br> - Lao Tzu</quote></h4>
+      </div>
+      
+
+    </div> <!-- Div inner carousel end -->
+	
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!--
+    resume
+ Page Container -->
+<div class="container-fluid" style="max-width:1400px;" id="resume">
+
+<h1  class="format w3-text-teal" style="text-align:center;margin-bottom:5vw;">Resume</h1>
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class=" w3-text-teal w3-card-4">
+        <div class="w3-display-container">
+          <img src="dhiraj.jpg" style="width:100%" alt="Dhiraj_profile">
+          <div class="w3-display-bottomleft w3-container w3-text-teal">
+            <h2 style="color:white">Dhiraj Ramnani</h2>
+          </div>
+        </div>
+        <div class="w3-container w3-margin-top">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software Developer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Mumbai, INDIA</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>dhirajramnani86@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+91 9930702440</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>HTML &amp; CSS</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:22px;width:90%"></div>
+          </div>
+          <p>Java &amp; Android SDK</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:22px;width:80%">
+           
+            </div>
+          </div>
+          <p>Bootstrap</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class=" w3-round-xlarge w3-teal" style="height:22px;width:75%"></div>
+          </div>
+		   <p>MySQL</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class=" w3-round-xlarge w3-teal" style="height:22px;width:75%"></div>
+          </div>
+          <p>Java Script</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class=" w3-round-xlarge w3-teal" style="height:22px;width:50%"></div>
+          </div>
+          <br>
+		  <hr>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>Hindi</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:22px;width:90%"></div>
+          </div>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:22px;width:90%"></div>
+          </div>
+          <p>Sindhi</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:22px;width:90%"></div>
+          </div>
+          <p>Marathi</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:22px;width:70%"></div>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    
+    <div class="w3-twothird">
+
+        <!-- Education -->
+         <div class="w3-container w3-card w3-transparent w3-margin-bottom">
+        <h2 class="w3-text-teal w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container w3-text-teal">
+          <h5 class="w3-opacity"><b>Kishinchand Chellaram College, Churchgate - University of Mumbai</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> June 2014 - April 2017</h6>
+          <p>Bachelors of Science - Information Technology &nbsp;( 6.37 out of 7 GPA )</p>
+          <hr>
+        </div>
+        <div class="w3-container w3-text-teal">
+          <h5 class="w3-opacity"><b>S.I.E.S College, Nerul - University of Mumbai</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>Masters of Science - Computer Science &nbsp;( 8.4 out of 10 CGPA )</p>
+        </div>
+      </div>
+      <!-- End of education -->
+
+    <!-- Projects -->
+      <div class="w3-container w3-card w3-transparent w3-margin-bottom">
+        <h2 class="w3-text-teal w3-padding-16"><i class="fa fa-laptop fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+       
+        <div class="w3-container w3-text-teal">
+          <h5 class="w3-opacity"><b>Animal Quizia</b></h5>
+          <p>Android Quiz Application to guess the animal name from the image.</p>
+          <hr>
+        </div>
+        <div class="w3-container w3-text-teal">
+          <h5 class="w3-opacity"><b>Money Manager</b></h5>
+          <p>Android Application that tracks your income and expenses enabling users to visualize their money flow through graphs and pie charts.</p>
+        </div>
+      </div>
+      <!-- End of project -->
+      <!-- Achievements -->
+      <div class="w3-container w3-card w3-transparent w3-margin-bottom">
+        <h2 class="w3-text-teal w3-padding-16"><i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Achievements</h2>
+       
+        <div class="w3-container w3-text-teal">
+         <ul style="list-style:none">
+         <li><i class="fa fa-arrow-right fa-fw w3-margin-right w3-text-teal"></i>2nd rank in M.Sc C.S semester 1 &amp; 2</li>
+         <li><i class="fa fa-arrow-right fa-fw w3-margin-right w3-text-teal"></i>Worked as an Asst. Professor at 'IWSA' (NGO)</li>
+         <li><i class="fa fa-arrow-right fa-fw w3-margin-right w3-text-teal"></i>Awarded 2nd Prize for Poster Competition</li>
+         </ul>
+        </div>
+
+      </div>
+      <!-- End of Achievements -->
+
+      <!-- links -->
+            <div class="w3-container w3-card w3-transparent w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-arrow-circle-down fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Links</h2>
+            <div class="w3-container w3-text-teal">
+          <h6 class="w3-text-teal">
+             <a href="https://github.com/dhiraj97">
+              <i class="fa fa-github fa-fw w3-margin-right w3-xlarge">
+              </i>
+              </a>
+              <a href="https://www.linkedin.com/in/dhiraj-ramnani-01b201105/">
+              <i class="fa fa-linkedin-square fa-fw w3-margin-right  w3-xlarge">
+                </i>
+                </a>
+              </h6>
+        </div>
+           </div>
+
+           <!-- End of links -->
+
+           <!-- Certificates -->
+           <div class="w3-container w3-card w3-transparent w3-padding-16">
+        <h2 class="w3-text-teal w3-padding-16 "><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Certificates</h2>
+        <div class="w3-container w3-text-teal" style="padding-bottom:20px;">
+         <ul style="list-style:none">
+         <li><i class="fa fa-arrow-right fa-fw w3-margin-right w3-text-teal"></i><a href="https://www.youracclaim.com/badges/10bfe28e-fbb4-499d-8c82-c6856859a722/linked_in_profile">Data Science Foundations - Level 1 IBM</a></li>
+         <li><i class="fa fa-arrow-right fa-fw w3-margin-right w3-text-teal"></i><a href="https://www.udemy.com/certificate/UC-N82SWMDQ/">Tableau Desktop for Accurate Business Analysis Udemy</a></li>
+         <li><i class="fa fa-arrow-right fa-fw w3-margin-right w3-text-teal"></i><a href="https://www.udemy.com/certificate/UC-Q4LWP49W/">The Ultimate MySQL Bootcamp Udemy</a></li>
+         </ul>
+        </div>
+           </div>
+           <!-- End of Certificates -->
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div><!-- End of RESUME -->
+
+<!-- project -->
+<div id="project" class=" container-fluid" style="max-width:100%">
+
+<h1  class="format w3-text-teal" style="text-align:center;margin-bottom:5vw;">Mini Projects</h1>
+<div class="w3-content" style="max-width:100vw;">
+<a href="todolist.html" target="_blank"><img class="mySlides" src="todolist.jpg" style="margin:0 auto;"></a>
+<a href="colorGame.html" target="_blank"> <img class="mySlides" src="colorGame.jpg" style="margin:0 auto"></a>
+<a href="animation/circles.html" target="_blank"> <img class="mySlides" src="animounds.jpg" style="margin:0 auto"></a>
+ <!-- <img class="mySlides" src="me.jpg" style="margin:0 auto">  -->
+</div>
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-teal" onclick="plusDivs(-1)">< Prev</button>
+    <button class="w3-button w3-teal" onclick="plusDivs(1)">Next ></button>
+  </div>
+  <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button>
+</div>
+</div>
+<!-- End of project -->
+<!-- Contact -->
+
+<div class=" container-fluid w3-text-teal" style="margin-top:10vw" id="contact">
+
+  <h1 class="text-center ">CONTACT</h1>
+    <div class="center" style="margin-top:5vw">
+      <div class="row" >
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" style="border:4px groove powderblue;" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" style="border:4px groove powderblue;" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" style="border:4px groove powderblue;" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <button class="btn btn-default pull-right" style="border:4px groove powderblue;" type="submit" onclick= "click_me()">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div> <!--End of Contact -->
+  <button class="btn btn-outline-light">
+      <a href="emailsig.html">Email Sig
+      </a>  </button>
+  </div> <!-- End of hidewhennavtoggles -->
+  </div> <!-- End of visibility progress -->
+  
+  
+  <!-- particles.js reference -->
+<script src="particles/js/lib/particles.min.js"></script>
+<script>
+particlesJS.load('particles-js','particles/particles.json',function(){
+console.log("Loaded");
+});
+//image map
+$("img[usemap]").imageMap();
+</script>
+
+<script type="text/javascript">
+
+/*
+<!-- changing backgroung image every 3 seconds -->
+var image = ["black","lightgrey","gold"];
+var cons = 0;
+setInterval(function hello()
+{
+   document.getElementById("myPage").style.backgroundColor=""+image[cons];
+   cons++;
+   if (cons == image.length) {
+        cons =  0;
+      }
+},3000);
+<!-- image change end -->
+*/
+document.getElementById("visibility").style.visibility = "hidden";
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== ""){
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+
+})
+
+function move() {
+  var elem = document.getElementById("myBar"); 
+  var width = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+	  document.getElementById("myProgress").style.display = "none";
+	  document.getElementById("visibility").style.visibility = "visible";
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+	  /*
+      elem.innerHTML = width * 1 + '%';
+	  */
+    }
+  }
+}
+
+var counter = 0;
+
+function hidebackscreen()
+{
+		counter++;
+	if(counter%2 != 0)
+	{
+	
+		document.getElementById("hidewhennavtoggles").style.visibility = "hidden";
+		document.getElementById("myCarousel").style.visibility = "hidden";
+	}
+	else{
+	
+	
+		document.getElementById("hidewhennavtoggles").style.visibility = "visible";
+		document.getElementById("myCarousel").style.visibility = "visible";
+	}
+}
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-teal", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-teal";
+  }
+</script>
+</body>
+</html>

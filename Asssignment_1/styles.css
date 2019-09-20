@@ -1,0 +1,140 @@
+/* This is a main style file */
+body {
+    background-color: white;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: block;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #6200ee;
+    width: 100%;
+
+}
+
+nav a.img {
+    width: 268px;
+    height: 64px;
+}
+
+nav a.text_links {
+    float: right;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+}
+
+nav a.text_links:hover {
+    background-color: #03dac5;
+    color: black;
+}
+
+nav a.active {
+    background-color: #03dac5;
+    color: black;
+}
+
+#particles-js {
+    padding-top: 150px;
+    height: 600px;
+    background: linear-gradient(to bottom right, #03dac5, #6200ee);
+}
+
+.content {
+    text-align: left;
+    margin: 100px 25px 100px 50px;
+    line-height: 25px;
+    word-spacing: 5px;
+
+}
+
+.contact,
+.portfolio {
+    margin: 100px 25px 100px 50px;
+}
+
+.description,
+.hobbies {
+    float: left;
+    margin-left: 4%;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 450px;
+    padding: 30px;
+    background-color: #6200ee;
+    color: #fff;
+}
+
+.description h1,
+.hobbies h1 {
+    margin-bottom: 45px;
+}
+
+.description:hover,
+.hobbies:hover {
+    background-color: #03dac5;
+    color: #000;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 1px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: solid #6600ee 2px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px 20px;
+    border: solid #6600ee 2px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #6200ee;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border: solid #6200ee 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: #6200ee;
+    background-color: #fff;
+
+}
+
+.portfolio h1 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.projects a img {
+    float left;
+    width: 25%;
+    margin: 2.9em;
+}
+
+footer {
+    clear: left;
+    background-color: #6200ee;
+    color: #fff;
+    padding-left: 100px;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Music template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/contact.css">
+    <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_content d-flex flex-row align-items-center justify-content-center">
+
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="" class="d-flex flex-row align-items-end justify-content-start">
+                                    <img src="images/ts-logo.png" alt="Logo">
+                                </a>
+                            </div>
+
+                            <!-- Main Navigation -->
+                            <nav class="main_nav">
+                                <ul class="d-flex flex-row align-items-center justify-content-start">
+                                    <li><a href="home.html">Home</a></li>
+                                    <li><a href="music.html">Music</a></li>
+                                    <li class="active"><a href="aboutbeforelogin.html">About</a></li>
+                                </ul>
+                            </nav>
+
+                            <!-- User area -->
+                            <div class="log_reg d-flex flex-row align-items-center justify-content-start">
+                                <ul class="d-flex flex-row align-items-start justify-content-start">
+                                    <li class="nav-item">
+                                        <a data-toggle="modal" href="" role="button" data-target="#exampleModal">Sign Up</a>
+
+                                    </li>
+                                    <li class="nav-item">
+                                        <a data-toggle="modal" href="" role="button" data-target="#exampleModal2">Login</a>
+
+                                    </li>
+                                </ul>
+
+                                <!-- Hamburger -->
+                                <div class="hamburger d-flex flex-column align-items-end justify-content-between">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+         <!-- Sign Up Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-12">
+                            <div class="contact_form_container">
+                                <form action="" class="contact_form" id="contact_form">
+                                    <div class="col-md-12"><input type="text" class="contact_input" placeholder="Your Name" required="required"></div>
+                                    <div class="col-md-12"><input type="email" class="contact_input" placeholder="Your E-mail" required="required"></div>
+                                    <div class="col-md-12"><input type="password" class="contact_input" placeholder="Your Password" required="required"></div>
+                                    <div class="col-md-12"><input type="password" class="contact_input" placeholder="Confirm Password" required="required"></div>
+                                    <div class="col-md-12 text-center">
+                                        <a href="index.html"><button class="button contact_form_button"><span>Register</span></button></a>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <a href="index.html"><i class="fa fa-facebook fa-2x" style="color:#3b5998;margin-right: 2em;"></i></a>
+                                        <a href="index.html"><i class="fa fa-google fa-2x" style="color:#EA4335"></i></a> 
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-12">
+                            <div class="contact_form_container">
+                                <form action="" class="contact_form" id="contact_form">
+                                    <div class="col-md-12"><input type="email" class="contact_input" placeholder="Your E-mail" required="required"></div>
+                                    <div class="col-md-12"><input type="password" class="contact_input" placeholder="Your Password" required="required"></div>
+                                    <div class="col-md-12 text-center">
+                                        <a href="index.html"><button class="button contact_form_button"><span>Log In</span></button></a>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <a href="">Forgot password?</a>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <a href="index.html"><i class="fa fa-facebook fa-2x" style="color:#3b5998;margin-right: 2em;"></i></a>
+                                        <a href="index.html"><i class="fa fa-google fa-2x" style="color:#EA4335"></i></a> 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu -->
+
+        <div class="menu">
+            <div class="menu_container">
+                <div class="menu_background"></div>
+                <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+                <div class="menu_content d-flex flex-column align-items-center justify-content-start">
+                    <nav class="menu_nav">
+                        <ul class="d-flex flex-column align-items-center justify-content-start">
+                            <li class="active"><a href="home.html">Home</a></li>
+                            <li><a href="music.html">Music</a></li>
+                            <li><a href="aboutbeforelogin.html">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/contact.jpg" data-speed="0.8"></div>
+            <div class="home_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content text-center">
+                                <div class="home_title">About</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+
+        <div class="contact">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Contact Content -->
+                    <div class="col-lg-12">
+                        <div class="contact_content">
+                            <div class="contact_title">About Talent Scout</div>
+                            <div class="contact_text">
+                                <p>Talent Scout is a web application that allows music lovers to constantly be updated with the songs and artists they love the most. We are changing the way how people find and play the music. Talent Scout is not just a “music streaming website” but it an innovative way of connecting music lovers with their preference of music and artists. Users can easily browse through popular streaming music, radio and other hosted internet sites. ‘My Streams’ provides recommendation based on your tastes and what’s trending around you. Also, users can connect with their existing sources of music like Google Music/ iTunes and Spotify. ‘My Shouts’ allows the users to share their music experience with their friends on their social media accounts (Facebook/ Twitter/ YouTube). Users can tag their friends using ‘My Shouts’and they can select their favourite artists and follow them on their social media profiles in order to be alerted to news, concerts and upcoming releases.
+                                    All of this can be accessible from ‘My Artists’.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="background_image" style="background-image:url(images/footer.jpg)"></div>
+            <div class="footer_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <!-- Footer Social -->
+                            <div class="footer_social">
+                                <ul class="d-flex flex-row align-items-center justify-content-center">
+                                    <li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href=""><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href=""><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="copyright text-center">
+                                Copyright &copy;<script>
+                                    document.write(new Date().getFullYear());
+
+                                </script> All rights reserved | This template is made by TalentScout
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="styles/bootstrap-4.1.2/popper.js"></script>
+    <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+    <script src="plugins/greensock/TweenMax.min.js"></script>
+    <script src="plugins/greensock/TimelineMax.min.js"></script>
+    <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="plugins/greensock/animation.gsap.min.js"></script>
+    <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="plugins/jPlayer/jquery.jplayer.min.js"></script>
+    <script src="plugins/jPlayer/jplayer.playlist.min.js"></script>
+    <script src="plugins/easing/easing.js"></script>
+    <script src="plugins/progressbar/progressbar.min.js"></script>
+    <script src="plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
